@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style_new.css" />
+</head>
+
+<body>
+  <script src="sc.js"> </script>
+  <div class="container">
+    <h1>Track Your Expense</h1>
+    <span>Balance Amount</span>
+    <span class="balance">₹0.00</span>
+    <div class="inc-exp-container">
+      <div>
+        <span>INCOME</span>
+        <p id="money-plus" class="money-plus">+₹0.00</p>
+      </div>
+      <div class="rule"></div>
+      <div>
+        <span>EXPENSE</span>
+        <p class="money-minus" id="money-minus">-₹0.00</p>
+      </div>
+    </div>
+
+    <h3>History</h3>
+    <ul id="list" class="list">
+      <li class="minus">
+        Cash <span>-₹400</span><button class="delete-btn">x</button>
+      </li>
+    </ul>
+    <div class="trans-container">
+      <h3>Add new Transaction</h3>
+      <form action="" id="form">
+        <div class="form-control">
+          <label for="Text">Description</label>
+          <input type="text" id="text" placeholder="What is this Amount" />
+        </div>
+        <div class="form-control">
+          <label for="amount">Amount</label>
+          <input type="number" id="amount" placeholder="Enter Amount" />
+        </div>
+        <div class="radio">
+          <input class="rad" type="radio" name="Choice" id="income" value="Income" />
+          <label class="radio_label" for="income">Income</label>
+          <input class="rad" type="radio" name="Choice" id="expense" value="expense" />
+          <label class="radio_label" for="expense">Expense</label>
+          <input class="rad" type="radio" name="Choice" id="tax" value="tax" />
+          <label class="radio_label" for="tax">Tax</label>
+        </div>
+        <button class="btn">Add Transaction</button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
