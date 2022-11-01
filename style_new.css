@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --shadow: 2px 2px 7px #200845ef;
+  --bg-col: rgb(0, 137, 164);
+  --bg-col-2: rgb(0, 100, 120);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins";
+}
+
+body {
+  background-color: var(--bg-col);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  height: 90vh;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 100px;
+  background-color: var(--bg-col-2);
+  padding: 20px;
+  border-radius: 10px;
+}
+.bal-container {
+  display: flex;
+  flex-direction: column;
+}
+.bal-container span:nth-child(1) {
+  font-size: 1.3rem;
+}
+.bal-container span:nth-child(2) {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.inc-exp-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  border: 2px solid grey;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: var(--shadow);
+}
+
+.inc-exp-container > div {
+  width: calc(100% / 2);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.inc-exp-container .rule {
+  width: 2px;
+  background-color: grey;
+  height: 100%;
+  padding: 0px;
+}
+.inc-exp-container > div:nth-child(1) {
+  align-items: center;
+  color: rgb(0, 170, 0);
+}
+.inc-exp-container > div:nth-child(3) {
+  align-items: center;
+  color: red;
+}
+h3 {
+  border-bottom: 1px solid black;
+}
+
+/* .list li {
+  background-color: #fff;
+  box-shadow: var(--shadow);
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+}
+.list li.plus {
+  border-right: 5px solid #2ecc71;
+}
+
+.list li.minus {
+  border-right: 5px solid #c0392b;
+}
+
+.list .delete-btn {
+  cursor: pointer;
+  background-color: #85170a;
+  border: 0;
+  color: rgb(6, 6, 6);
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.list li:hover .delete-btn {
+  opacity: 1;
+}  */
+
+#list {
+  display: flex;
+  flex-direction: column;
+}
+#list li {
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  background-color: white;
+  margin: 5px 0;
+  padding: 10px;
+}
+#list li::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 5px;
+  top: 0;
+  right: 0;
+}
+#list .green::after {
+  background-color: rgb(0, 170, 0);
+}
+#list .red::after {
+  background-color: red;
+}
+#list li button {
+  position: absolute;
+  width: 20px;
+  left: -20px;
+  height: 30px;
+  top: calc(50% - 30px / 2);
+  background-color: red;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+#list li:hover button,
+#list li button:hover,
+#list li:focus button,
+#list li button:focus {
+  opacity: 1;
+}
+
+.trans-container {
+  width: 100%;
+}
+.trans-container form > * {
+  margin: 10px 0;
+}
+.trans-container .form-control {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0;
+}
+.trans-container label {
+  display: inline-block;
+  margin: 10px 0;
+  text-emphasis: bold;
+}
+.trans-container input[type="text"],
+.trans-container input[type="number"] {
+  border: 1px solid #080101;
+  border-radius: 8px;
+  display: block;
+  font-size: 12px;
+  padding: 14px;
+  width: 100%;
+}
+.trans-container .radio {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid black;
+  overflow: hidden;
+}
+.trans-container .radio > input {
+  display: none;
+}
+.trans-container .radio > label {
+  height: 100%;
+  width: calc(100% / 2);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+.btn {
+  cursor: pointer;
+  background-color: #9c88ff;
+  box-shadow: var(--shadow);
+  color: rgb(10, 10, 10);
+  border: 0;
+  display: block;
+  font-size: 16px;
+  margin: 10px 0 30px;
+  padding: 10px;
+  width: 100%;
+}
+
+.btn:focus,
+.delete-btn:focus {
+  outline: 0;
+}
+.trans-container .radio > label:nth-child(0n + 4) {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+.trans-container .radio > input:checked:nth-child(0n + 1) + label {
+  background-color: green;
+}
+.trans-container .radio > input:checked:nth-child(0n + 3) + label {
+  background-color: red;
+}
+.trans-container .radio > input:checked:nth-child(0n + 5) + label {
+  background-color: blue;
+}
