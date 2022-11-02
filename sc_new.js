@@ -23,7 +23,7 @@ function onCross(event) {
         inc += elem.amount;
         bal += elem.amount;
       }
-      if (elem.selec == "expense" || elem.selec == "tax") {
+      if (elem.selec == "expense") {
         exp += elem.amount;
         bal -= elem.amount;
       }
@@ -65,7 +65,7 @@ function onSub(event) {
       inc += amt;
       bal += amt;
     }
-    if (select == "expense" || select == "tax") {
+    if (select == "expense" ) {
       exp += amt;
       bal -= amt;
     }
