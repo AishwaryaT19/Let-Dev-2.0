@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style_new.css" />
+    <script src="./sc_new.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Track Your Expense</h1>
+      <div class="bal-container">
+        <span>Balance Amount</span>
+        <span class="balance" id="balance">₹0.00</span>
+      </div>
+      <div class="inc-exp-container">
+        <div>
+          <span>INCOME</span>
+          <p id="money-plus" class="money-plus">₹0.00</p>
+        </div>
+        <div class="rule"></div>
+        <div>
+          <span>EXPENSE</span>
+          <p class="money-minus" id="money-minus">₹0.00</p>
+        </div>
+      </div>
+
+      <h3>History</h3>
+      <ul id="list" class="list"></ul>
+      <div class="trans-container">
+        <h3>Add new Transaction</h3>
+        <form id="form" onsubmit="onSub(event)">
+          <div class="form-control">
+            <label for="Text">Description</label>
+            <input
+              required
+              type="text"
+              id="text"
+              placeholder="What is this Amount"
+            />
+          </div>
+          <div class="form-control">
+            <label for="amount">Amount</label>
+            <input
+              required
+              id="amount"
+              placeholder="Enter Amount"
+              type="number"
+              step="0.01"
+            />
+          </div>
+          <div class="radio">
+            <input
+              class="rad"
+              type="radio"
+              name="Choice"
+              id="income"
+              value="income"
+            />
+            <label class="radio_label" for="income">Income</label>
+            <input
+              class="rad"
+              type="radio"
+              name="Choice"
+              id="expense"
+              value="expense"
+            />
+            <label class="radio_label" for="expense">Expense</label>
+          </div>
+          <button class="btn" type="submit">Add Transaction</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
