@@ -137,7 +137,6 @@ h3 {
   margin: 5px 0;
 }
 .trans-container label {
-  /* display: inline-block; */
   margin: 10px 0;
   text-emphasis: bold;
 }
@@ -145,7 +144,7 @@ h3 {
 .trans-container input[type="number"] {
   border: 1px solid #080101;
   border-radius: 8px;
-  /* display: block; */
+ 
   font-size: 12px;
   padding: 14px;
   width: 100%;
